@@ -1,3 +1,5 @@
 gunicorn
-streamlit==0.62.1
+streamlit==1.9.0
+st-annotated-text
+streamlit-option-menu
 
