@@ -2,15 +2,15 @@ import streamlit as st
 import json
 from traitlets import default
 from Classifier import KNearestNeighbours
-# from PIL import Image
-# from annotated_text import annotated_text
+from PIL import Image
+from annotated_text import annotated_text
 from streamlit_option_menu import option_menu
 from operator import itemgetter
 
 
 
-# img = Image.open('favicon.png')
-# st.set_page_config(page_title='Movie-Recommendation-Engine' , page_icon=img , layout="centered",initial_sidebar_state="expanded")
+img = Image.open('favicon.png')
+st.set_page_config(page_title='Movie-Recommendation-Engine' , page_icon=img , layout="centered",initial_sidebar_state="expanded")
 
 
 if st.button("VISIT ME"):
@@ -83,10 +83,10 @@ if __name__ == '__main__':
             table = knn(test_point, n)
             st.write("")
             st.write("")
-            # annotated_text(
-            # ("-- THE RECOMMENDED MOVIES 📈--","","#e98a15"),".")
-            # st.write("")
-            # st.write("")
+            annotated_text(
+            ("-- THE RECOMMENDED MOVIES 📈--","","#e98a15"),".")
+            st.write("")
+            st.write("")
 
             for movie, link in table:
                 st.markdown(f"[{movie}]({link})")
@@ -99,8 +99,8 @@ if __name__ == '__main__':
             test_point = [1 if genre in options else 0 for genre in genres]
             test_point.append(imdb_score)
             table = knn(test_point, n)
-            # annotated_text(
-            # ("-- THE RECOMMENDED MOVIES 📈--","","#e98a15"),".")
+            annotated_text(
+            ("-- THE RECOMMENDED MOVIES 📈--","","#e98a15"),".")
             for movie, link in table:
                 # Displays movie title with link to imdb
                 
