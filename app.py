@@ -4,7 +4,7 @@ from traitlets import default
 from Classifier import KNearestNeighbours
 # from PIL import Image
 # from annotated_text import annotated_text
-# from streamlit_option_menu import option_menu
+from streamlit_option_menu import option_menu
 from operator import itemgetter
 
 
@@ -13,33 +13,31 @@ from operator import itemgetter
 # st.set_page_config(page_title='Movie-Recommendation-Engine' , page_icon=img , layout="centered",initial_sidebar_state="expanded")
 
 
-
 if st.button("VISIT ME"):
     link = '[PRAGYA BISHERWAL](https://www.linkedin.com/in/pragya-bisherwal/)'
     st.markdown(link, unsafe_allow_html=True)
     
 
-# with st.sidebar:
-#     selected = option_menu(
-#                 menu_title="Main Menu",  # required
-#                 options=["Home", "My Work", "Contact"],  # required
-#                 icons=["house", "book", "envelope"],  # optional
-#                 menu_icon="cast",  # optional
-#                 default_index=0,  # optional
-#             )
+with st.sidebar:
+    selected = option_menu(
+                menu_title="Main Menu",  # required
+                options=["Home", "My Work", "Contact"],  # required
+                icons=["house", "book", "envelope"],  # optional
+                menu_icon="cast",  # optional
+                default_index=0,  # optional
+            )
             
 
-#     if selected == "Home":
-#         st.title(f"MOVIE RECOMMENDATION ENGINE")
-#     if selected == "My Work":
-#         st.markdown(""" ## -- Check Out My Work 💻 -- <br>🎲  http://lnkiy.in/Pragya_Github 🎲 http://lnkiy.in/Pragya_Resume 🎲 http://lnkiy.in/Pragya_Portfolio """,True)
+    if selected == "Home":
+        st.title(f"MOVIE RECOMMENDATION ENGINE")
+    if selected == "My Work":
+        st.markdown(""" ## -- Check Out My Work 💻 -- <br>🎲  http://lnkiy.in/Pragya_Github 🎲 http://lnkiy.in/Pragya_Resume 🎲 http://lnkiy.in/Pragya_Portfolio """,True)
 
-#     if selected == "Contact":  
-#         st.text("")
-#         st.text("")
-#         v2 = st.selectbox("-- Want to Connect 📧 --",[" -- Connect -- ","pragyabisherwal@gmail.com","www.linkedin.com/in/pragya-bisherwal"],index = 0)
+    if selected == "Contact":  
+        st.text("")
+        st.text("")
+        v2 = st.selectbox("-- Want to Connect 📧 --",[" -- Connect -- ","pragyabisherwal@gmail.com","www.linkedin.com/in/pragya-bisherwal"],index = 0)
         
-# st.image("index.jpg")
 # Load data and movies list from corresponding JSON files
 with open(r'data.json', 'r+', encoding='utf-8') as f:
     data = json.load(f)
