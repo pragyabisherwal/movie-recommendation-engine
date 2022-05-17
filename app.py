@@ -27,7 +27,6 @@ with st.sidebar:
                 default_index=0,  # optional
             )
             
-
     if selected == "Home":
         st.title(f"MOVIE RECOMMENDATION ENGINE")
     if selected == "My Work":
@@ -64,9 +63,12 @@ if __name__ == '__main__':
     genres = ['Action', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Family',
               'Fantasy', 'Film-Noir', 'Game-Show', 'History', 'Horror', 'Music', 'Musical', 'Mystery', 'News',
               'Reality-TV', 'Romance', 'Sci-Fi', 'Short', 'Sport', 'Thriller', 'War', 'Western']
-
+    
     movies = [title[0] for title in movie_titles]
-    st.header('Movie Recommendation System') 
+    st.title('            Movie Recommendation Engine') 
+    img_2 = Image.open("index2.jpg")
+    st.image(img_2)
+    
 
     apps = ['--Select--', 'Movie based', 'Genres based']   
     app_options = st.selectbox('Select application:', apps)
