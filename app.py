@@ -30,7 +30,12 @@ with st.sidebar:
     if selected == "Home":
         st.title(f"MOVIE RECOMMENDATION ENGINE")
     if selected == "My Work":
-        st.markdown(""" ## -- Check Out My Work 💻 -- <br>🎲  http://lnkiy.in/Pragya_Github 🎲 http://lnkiy.in/Pragya_Resume 🎲 http://lnkiy.in/Pragya_Portfolio """,True)
+        st.info("_Check Out My Work 💻_")
+        st.markdown(""" ## -- Check Out My Work 💻 -- 
+       🎲 http://lnkiy.in/Pragya_Github 
+       🎲 http://lnkiy.in/Pragya_Resume 
+       🎲 http://lnkiy.in/Pragya_Portfolio 
+        """,True)
 
     if selected == "Contact":  
         st.text("")
