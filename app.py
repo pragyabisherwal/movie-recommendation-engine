@@ -65,17 +65,17 @@ if __name__ == '__main__':
               'Reality-TV', 'Romance', 'Sci-Fi', 'Short', 'Sport', 'Thriller', 'War', 'Western']
     
     movies = [title[0] for title in movie_titles]
-    st.title('            Movie Recommendation Engine') 
+    st.title('Movie Recommendation Engine') 
     img_2 = Image.open("index2.jpg")
     st.image(img_2)
     
 
-    apps = ['--Select--', 'Movie based', 'Genres based']   
-    app_options = st.selectbox('Select application:', apps)
+    apps = ['*--Select--*', 'Movie based', 'Genres based']   
+    app_options = st.selectbox('Method Of Recommendation:', apps)
     
     
     if app_options == 'Movie based':
-        movie_select = st.selectbox('Select movie:', ['--Select--'] + movies)
+        movie_select = st.selectbox('Select a movie:', ['--Select--'] + movies)
         if movie_select == '--Select--':
             st.write('Select a movie')
         else:
@@ -85,13 +85,15 @@ if __name__ == '__main__':
             table = knn(test_point, n)
             st.write("")
             st.write("")
-            annotated_text(
-            ("-- THE RECOMMENDED MOVIES 📈--","","#e98a15"),".")
+            st. markdown("<h1 style='text-align: center; color:purple;'>_ THE RECOMMENDED MOVIES 📈 _</h1>", unsafe_allow_html=True)
+            
             st.write("")
             st.write("")
-
+            
             for movie, link in table:
-                st.markdown(f"[{movie}]({link})")
+                st.info(movie)
+                st.markdown(f"📌 IMDB LINK --- [{movie}]({link})")
+
     elif app_options == apps[2]:
         options = st.multiselect('Select genres:', genres)
         if options:
@@ -101,12 +103,17 @@ if __name__ == '__main__':
             test_point = [1 if genre in options else 0 for genre in genres]
             test_point.append(imdb_score)
             table = knn(test_point, n)
-            annotated_text(
-            ("-- THE RECOMMENDED MOVIES 📈--","","#e98a15"),".")
+            st.write("")
+            st.write("")
+            st. markdown("<h1 style='text-align: center; color:purple;'>_ THE RECOMMENDED MOVIES 📈 _</h1>", unsafe_allow_html=True)
+
+            st.write("")
+            st.write("")
+            
             for movie, link in table:
                 # Displays movie title with link to imdb
-                
-                st.markdown(f"[{movie}]({link})")
+                st.info(movie)
+                st.markdown(f"📌 IMDB LINK --- [{movie}]({link})")
 
         else:
                 st.write("This is a simple Movie Recommender application.HOPE YOU LIKE IT "
