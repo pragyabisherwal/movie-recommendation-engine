@@ -9,7 +9,7 @@ from operator import itemgetter
 
 
 
-img = Image.open('favicon.png')
+img = Image.open('./images/favicon.png')
 st.set_page_config(page_title='Movie-Recommendation-Engine' , page_icon=img , layout="centered",initial_sidebar_state="expanded")
 
 
@@ -71,7 +71,7 @@ if __name__ == '__main__':
     
     movies = [title[0] for title in movie_titles]
     st.title('Movie Recommendation Engine') 
-    img_2 = Image.open("index2.jpg")
+    img_2 = Image.open("./images/index2.jpg")
     st.image(img_2)
     
 
