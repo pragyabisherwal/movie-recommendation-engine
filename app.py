@@ -21,21 +21,32 @@ if st.button("VISIT ME"):
 with st.sidebar:
     selected = option_menu(
                 menu_title="Main Menu",  # required
-                options=["Home", "My Work", "Contact"],  # required
+                options=["Home", "Work", "Contact"],  # required
                 icons=["house", "book", "envelope"],  # optional
                 menu_icon="cast",  # optional
                 default_index=0,  # optional
+                orientation="horizontal",
             )
             
     if selected == "Home":
         st.title(f"MOVIE RECOMMENDATION ENGINE")
-    if selected == "My Work":
-        st.info("_Check Out My Work 💻_")
-        st.markdown(""" ## -- Check Out My Work 💻 -- 
-       🎲 http://lnkiy.in/Pragya_Github 
-       🎲 http://lnkiy.in/Pragya_Resume 
-       🎲 http://lnkiy.in/Pragya_Portfolio 
-        """,True)
+
+    if selected == "Work":
+        st.header(" -- Check Out My Work 💻 -- ")
+        if st.button("PORTFOLIO"):
+            link = '[PRAGYA BISHERWAL](https://www.linkedin.com/in/pragya-bisherwal/)'
+            st.markdown(link, unsafe_allow_html=True)
+        if st.button("RESUME"):
+            link = '[PRAGYA BISHERWAL](https://www.linkedin.com/in/pragya-bisherwal/)'
+            st.markdown(link, unsafe_allow_html=True)
+        if st.button("GITHUB"):
+            link = '[PRAGYA BISHERWAL](https://www.linkedin.com/in/pragya-bisherwal/)'
+            st.markdown(link, unsafe_allow_html=True)
+    #     st.markdown(""" ## -- Check Out My Work 💻 -- 
+    #    🎲 http://lnkiy.in/Pragya_Github 
+    #    🎲 http://lnkiy.in/Pragya_Resume 
+    #    🎲 http://lnkiy.in/Pragya_Portfolio 
+    #     """,True)
 
     if selected == "Contact":  
         st.text("")
@@ -70,7 +81,9 @@ if __name__ == '__main__':
               'Reality-TV', 'Romance', 'Sci-Fi', 'Short', 'Sport', 'Thriller', 'War', 'Western']
     
     movies = [title[0] for title in movie_titles]
-    st.title('Movie Recommendation Engine') 
+
+    with st.container():
+       st.title('Movie Recommendation Engine') 
     img_2 = Image.open("./images/index2.jpg")
     st.image(img_2)
     
