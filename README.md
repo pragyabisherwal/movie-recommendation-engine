@@ -1,5 +1,4 @@
 
-
 #             MOVIE RECOMMENDATION ENGINE
 
 Recommender System is a system that seeks to predict or filter preferences according to the user's choices. Recommender systems are utilized in a variety of areas including movies, music, news, books, research articles, search queries, social tags, and products in general.
@@ -101,7 +100,7 @@ https://www.kaggle.com/datasets/carolzhangdc/imdb-5000-movie-dataset
 
 
 
-![Logo](https://miro.medium.com/max/1400/1*ID8CZKUq5-5we9n2W1-HeA.jpeg)
+![Logo](https://pianalytix.com/wp-content/uploads/2020/10/Content-based-Recommender-System.jpg)
 
 
 ## Screenshots
@@ -141,15 +140,13 @@ The KNN algorithm assumes that similar things exist in close proximity. In other
 Content-based filtering uses item features to recommend other items similar to what the user likes, based on their previous actions or explicit feedback.
 Content-based Filtering is a Machine Learning technique that uses similarities in features to make decisions. This technique is often used in recommender systems, which are algorithms designed to advertise or recommend things to users based on knowledge accumulated about the user.
 
-![Logo](https://miro.medium.com/max/1400/1*x8gTiprhLs7zflmEn1UjAQ.png)
+![Logo](https://editor.analyticsvidhya.com/uploads/62904R0.PNG)
 
 ## License
 
 [MIT](https://github.com/pragyabisherwal/movie-recommendation-engine/blob/master/LICENSE)
 
 [GNU General Public License v3.0](https://github.com/pragyabisherwal/movie-recommendation-engine/blob/master/LICENSE)
-## License
-
 ## Contributing
 
 Contributions are always welcome!
@@ -172,18 +169,22 @@ Connect with me here [Pragya Bisherwal](https://www.linkedin.com/in/pragya-bishe
 
 
 ## 🚀 About Me
-I'm a full stack developer...
+- 👋 Hi, I’m @pragyabisherwal
+- 👀 I’m interested in WEB DEVELOPMENT
+- 🌱 I’m currently learning Django
+- 💞️ I’m building my problem solving abilities.
+- 📫 Want To Contact : pragyabisherwal@gmail.com
 
 
 ## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherinempeterson.com/)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://pragyabisherwal.netlify.app/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pragya-bisherwal/)
+
 
 
 ## Feedback
 
-If you have any feedback, please reach out to us at fake@fake.com
+If you have any feedback, please reach out to me at pragyabisherwal@gmail.com
 
 
 ## Author
