@@ -1,4 +1,5 @@
 
+
 #             MOVIE RECOMMENDATION ENGINE
 
 Recommender System is a system that seeks to predict or filter preferences according to the user's choices. Recommender systems are utilized in a variety of areas including movies, music, news, books, research articles, search queries, social tags, and products in general.
@@ -19,6 +20,32 @@ Movie recommendation systems usually predict what movies a user will like based 
 Insert gif or link to demo
 
 
+## Presentation
+
+This is the slide show for the project I created on    `MOVIE RECOMMENDATION ENGINE`
+
+[MOVIE RECOMMENDATION ENGINE](https://linktodocumentation)
+
+
+## Features
+
+- Content-based Filtering
+- Imdb Direct Link
+- Movie And Genre Based Filering
+- Option To Select Multiple Genres
+- A movie could also be chosen based on its rating.
+- The range of movies available can be increased.
+
+
+## Installation
+
+Install my-project with npm
+
+```bash
+  npm install my-project
+  cd my-project
+```
+    
 ## Deployment
 
 To deploy this project run
@@ -28,7 +55,31 @@ To deploy this project run
 ```
 
 
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/pragyabisherwal/movie-recommendation-engine.git
+```
+
+Go to the project directory
+
+```bash
+  cd movie-recommendation-engine
+```
+
+Install dependencies
+
+```bash
+  pip install -r requirements.txt
+```
+
+Start the server
+
+```bash
+  streamlit run app.py
+```
 
 
 ## Tech Stack
@@ -36,7 +87,7 @@ To deploy this project run
 **WEB TECHNOLOGIES**
 
 ```bash
-Backend -- Python
+Backend -- Python , Numpy , Pandas 
 
 FrontEnd -- HTML,CSS,Streamlit
 ```
@@ -50,11 +101,14 @@ https://www.kaggle.com/datasets/carolzhangdc/imdb-5000-movie-dataset
 
 
 
-## License
+![Logo](https://miro.medium.com/max/1400/1*ID8CZKUq5-5we9n2W1-HeA.jpeg)
 
-[MIT](https://github.com/pragyabisherwal/movie-recommendation-engine/blob/master/LICENSE)
 
-[GNU General Public License v3.0](https://github.com/pragyabisherwal/movie-recommendation-engine/blob/master/LICENSE)
+## Screenshots
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+
 ## Lessons Learned
 
 **KNN ALGORITHM**
@@ -86,44 +140,58 @@ The KNN algorithm assumes that similar things exist in close proximity. In other
 
 Content-based filtering uses item features to recommend other items similar to what the user likes, based on their previous actions or explicit feedback.
 Content-based Filtering is a Machine Learning technique that uses similarities in features to make decisions. This technique is often used in recommender systems, which are algorithms designed to advertise or recommend things to users based on knowledge accumulated about the user.
-## Run Locally
 
-Clone the project
+![Logo](https://miro.medium.com/max/1400/1*x8gTiprhLs7zflmEn1UjAQ.png)
 
+## License
+
+[MIT](https://github.com/pragyabisherwal/movie-recommendation-engine/blob/master/LICENSE)
+
+[GNU General Public License v3.0](https://github.com/pragyabisherwal/movie-recommendation-engine/blob/master/LICENSE)
+## License
+
+MIT LICENSE
 ```bash
-  git clone https://github.com/pragyabisherwal/movie-recommendation-engine.git
+  https://github.com/pragyabisherwal/movie-recommendation-engine/blob/master/LICENSE
 ```
 
-Go to the project directory
+## Contributing
 
-```bash
-  cd movie-recommendation-engine
-```
+Contributions are always welcome!
 
-Install dependencies
+See `contributing.md` for ways to get started.
 
-```bash
-  pip install -r requirements.txt
-```
+For Discussion Just Head Over to
 
-Start the server
+`Pragya Bisherwal`(https://www.linkedin.com/in/pragya-bisherwal/)
 
-```bash
-  streamlit run app.py
-```
+Please adhere to this project's `code of conduct`.
+
+
+## Support
+
+For support, email pragyabisherwal@gmail.com 
+or 
+
+Connect with me here [Pragya Bisherwal](https://www.linkedin.com/in/pragya-bisherwal/.)
+
+
+## 🚀 About Me
+I'm a full stack developer...
+
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherinempeterson.com/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
+
+
+## Feedback
+
+If you have any feedback, please reach out to us at fake@fake.com
 
 
 ## Author
 
 - [@PragyaBisherwal](https://github.com/pragyabisherwal/)
-
-
-## Features
-
-- Content-based Filtering
-- Imdb Direct Link
-- Movie And Genre Based Filering
-- Option To Select Multiple Genres
-- A movie could also be chosen based on its rating.
-- The range of movies available can be increased.
 
