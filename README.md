@@ -150,11 +150,6 @@ Content-based Filtering is a Machine Learning technique that uses similarities i
 [GNU General Public License v3.0](https://github.com/pragyabisherwal/movie-recommendation-engine/blob/master/LICENSE)
 ## License
 
-MIT LICENSE
-```bash
-  https://github.com/pragyabisherwal/movie-recommendation-engine/blob/master/LICENSE
-```
-
 ## Contributing
 
 Contributions are always welcome!
