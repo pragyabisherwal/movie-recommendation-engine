@@ -120,7 +120,7 @@ if __name__ == '__main__':
             table = knn(test_point, n)
             st.write("")
             st.write("")
-            st. markdown("<h1 style='text-align: center; color:#A0CFD3;'>_ THE RECOMMENDED MOVIES 📈 _</h1>", unsafe_allow_html=True)
+            st. markdown("<h1 style='text-align: center; color:#A0CFD3;'> RECOMMENDED MOVIES 📈 </h1>", unsafe_allow_html=True)
             st.write("")
             st.write("")
             
