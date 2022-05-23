@@ -25,15 +25,22 @@ lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/private_files/lf
 # if st.button("VISIT ME"):
 #     link = '[PRAGYA BISHERWAL](https://www.linkedin.com/in/pragya-bisherwal/)'
 #     st.markdown(link, unsafe_allow_html=True)
-    
+
 
 with st.sidebar:
     selected = option_menu(
-                menu_title="MOVIE MANIA",  # required
+                menu_title="MOVIES MANIA",  # required
                 options=["Home", "Work", "Contact"],  # required
                 icons=["house", "book", "envelope"],  # optional
                 menu_icon="cast",  # optional
                 default_index=0,  # optional
+                
+                 styles={
+        "container": {"padding": "5!important", "background-color": "#0E1117"},
+        "icon": {"color": "#A0CFD3", "font-size": "25px"}, 
+        "nav-link": {"font-size": "25px", "text-align": "left", "margin":"0px","Font-family":"Monospace"},
+        "nav-link-selected": {"background-color": "#90EE90"},
+    }
                 
             )
             
@@ -42,20 +49,22 @@ with st.sidebar:
 
     if selected == "Work":
        
-        if st.info("PORTFOLIO"):
-            link = '[🎲  Visit My Portfolio >> ](http://lnkiy.in/Pragya_Portfolio)'
+        if st.info("**PORTFOLIO**"):
+            link = '[**🎲  Visit My Portfolio >>** ](http://lnkiy.in/Pragya_Portfolio)'
             st.markdown(link, unsafe_allow_html=True)
-        if st.success("RESUME"):
-            link = '[🎲 Have A Look On my Resume >> ](http://lnkiy.in/Pragya_Resume )'
+        if st.error("**RESUME**"):
+            link = '[**🎲 Have A Look On my Resume >>** ](http://lnkiy.in/Pragya_Resume )'
             st.markdown(link, unsafe_allow_html=True)
-        if st.error("GITHUB"):
-            link = '[🎲 Check Out My Github >> ](http://lnkiy.in/Pragya_Github )'
+        if st.success("**GITHUB**"):
+            link = '[**🎲 Check Out My Github >>** ](http://lnkiy.in/Pragya_Github )'
             st.markdown(link, unsafe_allow_html=True)
     if selected == "Contact":  
         st.text("")
         st.text("")
         v2 = st.selectbox("-- Want to Connect 📧 --",[" -- Connect -- ","pragyabisherwal@gmail.com","www.linkedin.com/in/pragya-bisherwal"],index = 0)
-        
+
+
+
 # Load data and movies list from corresponding JSON files
 with open(r'data.json', 'r+', encoding='utf-8') as f:
     data = json.load(f)
