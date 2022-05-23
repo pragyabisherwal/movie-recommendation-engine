@@ -1,16 +1,48 @@
 import streamlit as st
 import json
-from traitlets import default
 from Classifier import KNearestNeighbours
+from operator import itemgetter
+
 from PIL import Image
 from annotated_text import annotated_text
 from streamlit_option_menu import option_menu
-from operator import itemgetter
 
-
+import requests
+from streamlit_lottie import st_lottie
 
 img = Image.open('./images/favicon.png')
 st.set_page_config(page_title='Movie-Recommendation-Engine' , page_icon=img , layout="centered",initial_sidebar_state="expanded")
+
+def load_lottieurl(url):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
+lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
+
+with st.container():
+    st.write("---")
+    left_column, right_column = st.columns(2)
+    with left_column:
+        st.header("What I do")
+        st.write("##")
+        st.write(
+            """
+            On my YouTube channel I am creating tutorials for people who:
+            - are looking for a way to leverage the power of Python in their day-to-day work.
+            - are struggling with repetitive tasks in Excel and are looking for a way to use Python and VBA.
+            - want to learn Data Analysis & Data Science to perform meaningful and impactful analyses.
+            - are working with Excel and found themselves thinking - "there has to be a better way."
+            If this sounds interesting to you, consider subscribing and turning on the notifications, so you don’t miss any content.
+            """
+        )
+        st.write("[YouTube Channel >](https://youtube.com/c/CodingIsFun)")
+    with right_column:
+        st_lottie(lottie_coding, height=300, key="coding")
+
+
+
 
 
 if st.button("VISIT ME"):
@@ -20,15 +52,15 @@ if st.button("VISIT ME"):
 
 with st.sidebar:
     selected = option_menu(
-                menu_title="Main Menu",  # required
+                menu_title="MOVIE RECOMMENDATION ENGINE",  # required
                 options=["Home", "Work", "Contact"],  # required
                 icons=["house", "book", "envelope"],  # optional
                 menu_icon="cast",  # optional
                 default_index=0,  # optional
-                orientation="horizontal",
+                
             )
             
-    if selected == "Home":
+    if selected == "MOVIE RECOMMENDATION ENGINE":
         st.title(f"MOVIE RECOMMENDATION ENGINE")
 
     if selected == "Work":
