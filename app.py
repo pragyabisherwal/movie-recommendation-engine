@@ -19,40 +19,17 @@ def load_lottieurl(url):
         return None
     return r.json()
 
-lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
-
-with st.container():
-    st.write("---")
-    left_column, right_column = st.columns(2)
-    with left_column:
-        st.header("What I do")
-        st.write("##")
-        st.write(
-            """
-            On my YouTube channel I am creating tutorials for people who:
-            - are looking for a way to leverage the power of Python in their day-to-day work.
-            - are struggling with repetitive tasks in Excel and are looking for a way to use Python and VBA.
-            - want to learn Data Analysis & Data Science to perform meaningful and impactful analyses.
-            - are working with Excel and found themselves thinking - "there has to be a better way."
-            If this sounds interesting to you, consider subscribing and turning on the notifications, so you don’t miss any content.
-            """
-        )
-        st.write("[YouTube Channel >](https://youtube.com/c/CodingIsFun)")
-    with right_column:
-        st_lottie(lottie_coding, height=300, key="coding")
+lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/private_files/lf30_bb9bkg1h.json")
 
 
-
-
-
-if st.button("VISIT ME"):
-    link = '[PRAGYA BISHERWAL](https://www.linkedin.com/in/pragya-bisherwal/)'
-    st.markdown(link, unsafe_allow_html=True)
+# if st.button("VISIT ME"):
+#     link = '[PRAGYA BISHERWAL](https://www.linkedin.com/in/pragya-bisherwal/)'
+#     st.markdown(link, unsafe_allow_html=True)
     
 
 with st.sidebar:
     selected = option_menu(
-                menu_title="MOVIE RECOMMENDATION ENGINE",  # required
+                menu_title="MOVIE MANIA",  # required
                 options=["Home", "Work", "Contact"],  # required
                 icons=["house", "book", "envelope"],  # optional
                 menu_icon="cast",  # optional
@@ -64,22 +41,16 @@ with st.sidebar:
         st.title(f"MOVIE RECOMMENDATION ENGINE")
 
     if selected == "Work":
-        st.header(" -- Check Out My Work 💻 -- ")
-        if st.button("PORTFOLIO"):
-            link = '[PRAGYA BISHERWAL](https://www.linkedin.com/in/pragya-bisherwal/)'
+       
+        if st.info("PORTFOLIO"):
+            link = '[🎲  Visit My Portfolio >> ](http://lnkiy.in/Pragya_Portfolio)'
             st.markdown(link, unsafe_allow_html=True)
-        if st.button("RESUME"):
-            link = '[PRAGYA BISHERWAL](https://www.linkedin.com/in/pragya-bisherwal/)'
+        if st.success("RESUME"):
+            link = '[🎲 Have A Look On my Resume >> ](http://lnkiy.in/Pragya_Resume )'
             st.markdown(link, unsafe_allow_html=True)
-        if st.button("GITHUB"):
-            link = '[PRAGYA BISHERWAL](https://www.linkedin.com/in/pragya-bisherwal/)'
+        if st.error("GITHUB"):
+            link = '[🎲 Check Out My Github >> ](http://lnkiy.in/Pragya_Github )'
             st.markdown(link, unsafe_allow_html=True)
-    #     st.markdown(""" ## -- Check Out My Work 💻 -- 
-    #    🎲 http://lnkiy.in/Pragya_Github 
-    #    🎲 http://lnkiy.in/Pragya_Resume 
-    #    🎲 http://lnkiy.in/Pragya_Portfolio 
-    #     """,True)
-
     if selected == "Contact":  
         st.text("")
         st.text("")
@@ -115,9 +86,14 @@ if __name__ == '__main__':
     movies = [title[0] for title in movie_titles]
 
     with st.container():
-       st.title('Movie Recommendation Engine') 
-    img_2 = Image.open("./images/index2.jpg")
-    st.image(img_2)
+     left_column, right_column = st.columns(2)
+     with left_column:
+         st.write("")
+         st.title('MOVIE RECOMMENDATION ENGINE') 
+     with right_column:
+         st_lottie(lottie_coding, height=300,width=400, key="coding")
+        
+    
     
 
     apps = ['*--Select--*', 'Movie based', 'Genres based']   
@@ -141,7 +117,7 @@ if __name__ == '__main__':
             st.write("")
             
             for movie, link in table:
-                st.info(movie)
+                st.warning(movie)
                 st.markdown(f"📌 IMDB LINK --- [{movie}]({link})")
 
     elif app_options == apps[2]:
