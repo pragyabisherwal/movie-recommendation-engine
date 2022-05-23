@@ -111,8 +111,7 @@ if __name__ == '__main__':
             table = knn(test_point, n)
             st.write("")
             st.write("")
-            st. markdown("<h1 style='text-align: center; color:purple;'>_ THE RECOMMENDED MOVIES 📈 _</h1>", unsafe_allow_html=True)
-            
+            st. markdown("<h1 style='text-align: center; color:#A0CFD3;'>_ THE RECOMMENDED MOVIES 📈 _</h1>", unsafe_allow_html=True)
             st.write("")
             st.write("")
             
@@ -131,19 +130,17 @@ if __name__ == '__main__':
             table = knn(test_point, n)
             st.write("")
             st.write("")
-            st. markdown("<h1 style='text-align: center; color:purple;'>_ THE RECOMMENDED MOVIES 📈 _</h1>", unsafe_allow_html=True)
-
+            st. markdown("<h1 style='text-align: center; color:#A0CFD3;'> RECOMMENDED MOVIES 📈 </h1>", unsafe_allow_html=True)
             st.write("")
             st.write("")
             
             for movie, link in table:
                 # Displays movie title with link to imdb
-                st.info(movie)
+                st.warning(movie)
                 st.markdown(f"📌 IMDB LINK --- [{movie}]({link})")
 
         else:
-                st.write("This is a simple Movie Recommender application.HOPE YOU LIKE IT "
-                        "You can select the genres and change the IMDb score.")
+                st.write(" _Can Select Multiple Genres_ ")
                         
 
     else:
