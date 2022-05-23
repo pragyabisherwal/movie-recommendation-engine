@@ -10,6 +10,8 @@ from streamlit_option_menu import option_menu
 import requests
 from streamlit_lottie import st_lottie
 
+import streamlit.components.v1 as components
+
 img = Image.open('./images/favicon.png')
 st.set_page_config(page_title='Movie-Recommendation-Engine' , page_icon=img , layout="centered",initial_sidebar_state="expanded")
 
@@ -36,15 +38,15 @@ with st.sidebar:
                 default_index=0,  # optional
                 
                  styles={
-        "container": {"padding": "5!important", "background-color": "#0E1117"},
-        "icon": {"color": "#A0CFD3", "font-size": "25px"}, 
-        "nav-link": {"font-size": "25px", "text-align": "left", "margin":"0px","Font-family":"Monospace"},
-        "nav-link-selected": {"background-color": "#90EE90"},
+                "container": {"padding": "5!important", "background-color": "#0E1117" , "Font-family":"Monospace"},
+                "icon": {"color": "#A0CFD3", "font-size": "25px"}, 
+                "nav-link": {"font-size": "25px", "text-align": "left", "margin":"0px","Font-family":"Monospace"},
+                "nav-link-selected": {"background-color": "#90EE90"},
     }
                 
             )
             
-    if selected == "MOVIE RECOMMENDATION ENGINE":
+    if selected == "MOVIE MANIA":
         st.title(f"MOVIE RECOMMENDATION ENGINE")
 
     if selected == "Work":
@@ -154,3 +156,32 @@ if __name__ == '__main__':
 
     else:
         st.write('Select option')
+
+
+st. markdown("<h1 style='text-align: center; color:#A0CFD3;'> HOW IT WORKS 😲</h1>", unsafe_allow_html=True)
+
+st. markdown("<h1 style='text-align: center; color:#A0CFD3;'> EXPLORE THE CONTENT 😏</h1>", unsafe_allow_html=True)
+components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vTdOckh6g-mN8BHmdqjCXwuhcFyG9voMhbcmsuQkVNaXHuBJWnXCIphIJywZKHfN2El5Hn455H_L_YF/embed?start=true&loop=true&delayms=3000",width=670, height=400, scrolling=True)
+
+st. markdown("<h1 style='text-align: center; color:#A0CFD3;'> WANT TO CONNECT 👨‍⚖️</h1>", unsafe_allow_html=True)
+# ---- CONTACT ----
+with st.container():
+    st.write("---")
+    st.header("Get In Touch With Me!")
+    st.write("##")
+
+    # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
+    contact_form = """
+    <form action="https://formsubmit.co/pragyabisherwal@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" style="height:50px; width:600px; font-size:14pt;" placeholder="Your name" required>
+        <input type="email" name="email" style="height:50px; width:600px; font-size:14pt;" placeholder="Your email" required>
+        <textarea name="message" style="height:50px; width:600px; font-size:14pt;" placeholder="Your message here" required></textarea>
+        <button style="height:50px; width:600px; font-size:14pt;" type="submit">Send</button>
+    </form>
+    """
+    left_column, right_column = st.columns(2)
+    with left_column:
+        st.markdown(contact_form, unsafe_allow_html=True)
+    with right_column:
+        st.empty()
