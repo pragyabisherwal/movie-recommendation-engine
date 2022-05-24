@@ -104,7 +104,7 @@ if __name__ == '__main__':
          st.write("")
          st.title('MOVIE RECOMMENDER ENGINE') 
      with right_column:
-         st_lottie(lottie_coding, height=300,width=470, key="coding")
+         st_lottie(lottie_coding, height=300,width=400, key="coding")
         
     
     
