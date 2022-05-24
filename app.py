@@ -22,8 +22,10 @@ def load_lottieurl(url):
     return r.json()
 
 lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/private_files/lf30_bb9bkg1h.json")
-
-
+lottie_contact =load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_dhcsd5b5.json")
+lottie_loadLine =load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_yyjaansa.json")
+lottie_video =load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_1cmhfk0l.json")
+lottie_videoLine =load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_9B6yb3.json")
 # if st.button("VISIT ME"):
 #     link = '[PRAGYA BISHERWAL](https://www.linkedin.com/in/pragya-bisherwal/)'
 #     st.markdown(link, unsafe_allow_html=True)
@@ -102,7 +104,7 @@ if __name__ == '__main__':
          st.write("")
          st.title('MOVIE RECOMMENDATION ENGINE') 
      with right_column:
-         st_lottie(lottie_coding, height=300,width=400, key="coding")
+         st_lottie(lottie_coding, height=300,width=398, key="coding")
         
     
     
@@ -158,30 +160,54 @@ if __name__ == '__main__':
         st.write('Select option')
 
 
-st. markdown("<h1 style='text-align: center; color:#A0CFD3;'> HOW IT WORKS 😲</h1>", unsafe_allow_html=True)
+st.write("---")
+st. markdown("<h1 style='text-align:center; color:#A0CFD3;font-size:80px;font-family:monospace;'> HOW IT WORKS 😲</h1>", unsafe_allow_html=True)
+st.write("##")
+with st.container():
+    left_column, right_column = st.columns(2)
+    with left_column:
+        st.empty()
+
+        
+    with right_column:
+        st_lottie(lottie_video,height=400,width=400,key="coding4")
+
+
+
+
+
 
 st. markdown("<h1 style='text-align: center; color:#A0CFD3;'> EXPLORE THE CONTENT 😏</h1>", unsafe_allow_html=True)
 components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vTdOckh6g-mN8BHmdqjCXwuhcFyG9voMhbcmsuQkVNaXHuBJWnXCIphIJywZKHfN2El5Hn455H_L_YF/embed?start=true&loop=true&delayms=3000",width=670, height=400, scrolling=True)
 
+
+
+
+
+
+
+
+
+
+st_lottie(lottie_loadLine,height=300,width=700,key="coding3")
 st. markdown("<h1 style='text-align: center; color:#A0CFD3;'> WANT TO CONNECT 👨‍⚖️</h1>", unsafe_allow_html=True)
 # ---- CONTACT ----
+st.write("")
 with st.container():
-    st.write("---")
-    st.header("Get In Touch With Me!")
-    st.write("##")
-
-    # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
     contact_form = """
     <form action="https://formsubmit.co/pragyabisherwal@gmail.com" method="POST">
         <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="name" style="height:50px; width:600px; font-size:14pt;" placeholder="Your name" required>
-        <input type="email" name="email" style="height:50px; width:600px; font-size:14pt;" placeholder="Your email" required>
-        <textarea name="message" style="height:50px; width:600px; font-size:14pt;" placeholder="Your message here" required></textarea>
-        <button style="height:50px; width:600px; font-size:14pt;" type="submit">Send</button>
+        <input type="text" name="name" style="height:50px; width:300px; font-size:14pt; margin:5px;padding:10px;border-radius:5px;" placeholder="Your name" required>
+        <input type="email" name="email" style="height:50px; width:300px; font-size:14pt;margin:5px;padding:10px;border-radius:5px;" placeholder="Your email" required>
+        <textarea name="message" style="height:150px; width:300px; font-size:14pt;margin:5px;padding:10px;border-radius:5px;" placeholder="Your message here" required></textarea>
+        <button style=" height:50px; width:300px; font-size:14pt; margin:5px; padding:10px;border-radius:5px;background-color:#90EE90" type="submit">Send</button>
     </form>
     """
     left_column, right_column = st.columns(2)
     with left_column:
         st.markdown(contact_form, unsafe_allow_html=True)
+
+        
     with right_column:
-        st.empty()
+        st_lottie(lottie_contact,height=300,width=400,key="coding2")
+       
