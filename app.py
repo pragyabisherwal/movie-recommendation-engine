@@ -161,7 +161,7 @@ if __name__ == '__main__':
 
 
 st.write("---")
-st. markdown("<h1 style='text-align:center; color:#A0CFD3;font-size:80px;font-family:monospace;'> HOW IT WORKS 😲</h1>", unsafe_allow_html=True)
+st. markdown("<h2 style='text-align:center; color:#A0CFD3;font-size:60px;font-family:monospace;'> HOW IT WORKS 😲</h2>", unsafe_allow_html=True)
 st.write("##")
 with st.container():
     left_column, right_column = st.columns(2)
@@ -176,8 +176,10 @@ with st.container():
 
 
 
-
-st. markdown("<h1 style='text-align: center; color:#A0CFD3;'> EXPLORE THE CONTENT 😏</h1>", unsafe_allow_html=True)
+st.write("---")
+st. markdown("<h1 style='text-align:center; color:#A0CFD3;font-size:55px;font-family:monospace;'>   EXPLORE THE CONTENT 😏</h1>", unsafe_allow_html=True)
+st.write("")
+st.write("")
 components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vTdOckh6g-mN8BHmdqjCXwuhcFyG9voMhbcmsuQkVNaXHuBJWnXCIphIJywZKHfN2El5Hn455H_L_YF/embed?start=true&loop=true&delayms=3000",width=670, height=400, scrolling=True)
 
 
@@ -190,7 +192,7 @@ components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vTdOckh6g-mN8
 
 
 st_lottie(lottie_loadLine,height=300,width=700,key="coding3")
-st. markdown("<h1 style='text-align: center; color:#A0CFD3;'> WANT TO CONNECT 👨‍⚖️</h1>", unsafe_allow_html=True)
+st. markdown("<h1 style='text-align:center; color:#A0CFD3;font-size:60px;font-family:monospace;'> WANT TO CONNECT 👨‍⚖️</h1>", unsafe_allow_html=True)
 # ---- CONTACT ----
 st.write("")
 with st.container():
