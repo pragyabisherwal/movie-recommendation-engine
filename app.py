@@ -26,6 +26,7 @@ lottie_contact =load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_dh
 lottie_loadLine =load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_yyjaansa.json")
 lottie_video =load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_1cmhfk0l.json")
 lottie_videoLine =load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_9B6yb3.json")
+lottie_github =load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_S6vWEd.json")
 # if st.button("VISIT ME"):
 #     link = '[PRAGYA BISHERWAL](https://www.linkedin.com/in/pragya-bisherwal/)'
 #     st.markdown(link, unsafe_allow_html=True)
@@ -34,8 +35,8 @@ lottie_videoLine =load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_
 with st.sidebar:
     selected = option_menu(
                 menu_title="MOVIES MANIA",  # required
-                options=["Home", "Work", "Contact"],  # required
-                icons=["house", "book", "envelope"],  # optional
+                options=["Home", "Work", "Github-Repo"],  # required
+                icons=["house", "book", "github"],  # optional
                 menu_icon="cast",  # optional
                 default_index=0,  # optional
                 
@@ -48,7 +49,7 @@ with st.sidebar:
                 
             )
             
-    if selected == "MOVIE MANIA":
+    if selected == "Home":
         st.title(f"MOVIE RECOMMENDATION ENGINE")
 
     if selected == "Work":
@@ -62,10 +63,12 @@ with st.sidebar:
         if st.success("**GITHUB**"):
             link = '[**🎲 Check Out My Github >>** ](http://lnkiy.in/Pragya_Github )'
             st.markdown(link, unsafe_allow_html=True)
-    if selected == "Contact":  
-        st.text("")
-        st.text("")
-        v2 = st.selectbox("-- Want to Connect 📧 --",[" -- Connect -- ","pragyabisherwal@gmail.com","www.linkedin.com/in/pragya-bisherwal"],index = 0)
+            
+    if selected == "Github-Repo":  
+        st_lottie(lottie_github,height=220,width=300,key="coding5")
+        if st.button("     MOVIE RECOMMENDATION ENGINE   "):
+         link = '[     PRAGYA BISHERWAL     ](https://github.com/pragyabisherwal/movie-recommendation-engine)'
+         st.markdown(link, unsafe_allow_html=True)
 
 
 
