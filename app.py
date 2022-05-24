@@ -27,6 +27,8 @@ lottie_loadLine =load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_y
 lottie_video =load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_1cmhfk0l.json")
 lottie_videoLine =load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_9B6yb3.json")
 lottie_github =load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_S6vWEd.json")
+lottie_resume=load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_lrw0segg.json")
+lottie_portfolio=load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_dkuwscrg.json")
 # if st.button("VISIT ME"):
 #     link = '[PRAGYA BISHERWAL](https://www.linkedin.com/in/pragya-bisherwal/)'
 #     st.markdown(link, unsafe_allow_html=True)
@@ -50,18 +52,18 @@ with st.sidebar:
             )
             
     if selected == "Home":
-        st.title(f"MOVIE RECOMMENDATION ENGINE")
-
+       st.write("---")
+       st.header("MOVIE RECOMMENDATION ENGINE")
+       st.write("---")
     if selected == "Work":
        
-        if st.info("**PORTFOLIO**"):
+        if st.error("**PORTFOLIO**"):
+            st_lottie(lottie_resume,key="coding6")
             link = '[**🎲  Visit My Portfolio >>** ](http://lnkiy.in/Pragya_Portfolio)'
             st.markdown(link, unsafe_allow_html=True)
         if st.error("**RESUME**"):
+            st_lottie(lottie_portfolio,key="coding7")
             link = '[**🎲 Have A Look On my Resume >>** ](http://lnkiy.in/Pragya_Resume )'
-            st.markdown(link, unsafe_allow_html=True)
-        if st.success("**GITHUB**"):
-            link = '[**🎲 Check Out My Github >>** ](http://lnkiy.in/Pragya_Github )'
             st.markdown(link, unsafe_allow_html=True)
             
     if selected == "Github-Repo":  
