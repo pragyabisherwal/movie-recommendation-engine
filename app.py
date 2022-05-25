@@ -12,8 +12,35 @@ from streamlit_lottie import st_lottie
 
 import streamlit.components.v1 as components
 
+
+
+#Setting the Page Configuration
 img = Image.open('./images/favicon.png')
-st.set_page_config(page_title='Movie-Recommendation-Engine' , page_icon=img , layout="centered",initial_sidebar_state="expanded")
+st.set_page_config(page_title='MovieRecommenderEngine' , page_icon=img , layout="centered",initial_sidebar_state="expanded")
+
+
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: visible;}
+            footer:after{
+                background-color:#a873b0;
+                font-size:25px;
+                font-weight:bolder;
+                text-align:center;
+                width: 100%;
+                height:65px;
+                margin:1rem;
+                padding:0.8rem;
+                content:'Copyright © 2022 : Pragya Bisherwal';
+                display:block;
+                color:white;
+            }
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 
 def load_lottieurl(url):
     r = requests.get(url)
@@ -21,6 +48,8 @@ def load_lottieurl(url):
         return None
     return r.json()
 
+
+# URLS of all the lottie animation used
 lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/private_files/lf30_bb9bkg1h.json")
 lottie_contact =load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_dhcsd5b5.json")
 lottie_loadLine =load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_yyjaansa.json")
@@ -29,11 +58,9 @@ lottie_videoLine =load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_
 lottie_github =load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_S6vWEd.json")
 lottie_resume=load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_lrw0segg.json")
 lottie_portfolio=load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_dkuwscrg.json")
-# if st.button("VISIT ME"):
-#     link = '[PRAGYA BISHERWAL](https://www.linkedin.com/in/pragya-bisherwal/)'
-#     st.markdown(link, unsafe_allow_html=True)
 
 
+#Sidebar Designing And Functioning
 with st.sidebar:
     selected = option_menu(
                 menu_title="MOVIES MANIA",  # required
@@ -41,26 +68,22 @@ with st.sidebar:
                 icons=["house", "book", "github"],  # optional
                 menu_icon="cast",  # optional
                 default_index=0,  # optional
-                
                  styles={
                 "container": {"padding": "5!important", "background-color": "#0E1117" , "Font-family":"Monospace"},
                 "icon": {"color": "#A0CFD3", "font-size": "25px"}, 
-                "nav-link": {"font-size": "25px", "text-align": "left", "margin":"0px","Font-family":"Monospace"},
+                "nav-link": {"font-size": "20px", "text-align": "left", "margin":"0px","Font-family":"Monospace"},
                 "nav-link-selected": {"background-color": "#90EE90"},
-    }
-                
-            )
+                }
+                )
             
     if selected == "Home":
-       st.write("---")
-       st.header("MOVIE RECOMMENDATION ENGINE")
-       st.write("---")
+      st.empty()
     if selected == "Work":
-       
         if st.error("**PORTFOLIO**"):
             st_lottie(lottie_resume,key="coding6")
             link = '[**🎲  Visit My Portfolio >>** ](http://lnkiy.in/Pragya_Portfolio)'
             st.markdown(link, unsafe_allow_html=True)
+
         if st.error("**RESUME**"):
             st_lottie(lottie_portfolio,key="coding7")
             link = '[**🎲 Have A Look On my Resume >>** ](http://lnkiy.in/Pragya_Resume )'
@@ -74,17 +97,20 @@ with st.sidebar:
 
 
 
-# Load data and movies list from corresponding JSON files
+# Loading data and movies list from corresponding JSON files
 with open(r'data.json', 'r+', encoding='utf-8') as f:
     data = json.load(f)
 with open(r'titles.json', 'r+', encoding='utf-8') as f:
     movie_titles = json.load(f)
 
+#Applying the KNN algorithms on to the point
 def knn(test_point, k):
     # Create dummy target variable for the KNN Classifier
     target = [0 for item in movie_titles]
+
     # Instantiate object for the Classifier
     model = KNearestNeighbours(data, target, test_point, k=k)
+
     # Run the algorithm
     model.fit()
     # Distances to most distant movie
@@ -92,10 +118,11 @@ def knn(test_point, k):
     # Print list of 10 recommendations < Change value of k for a different number >
     table = list()
     for i in model.indices:
-        # Returns back movie title and imdb link
+        # Returns back ---> Movie title and IMDB link
         table.append([movie_titles[i][0], movie_titles[i][2]])
     return table
 
+#All the genres
 if __name__ == '__main__':
     genres = ['Action', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Family',
               'Fantasy', 'Film-Noir', 'Game-Show', 'History', 'Horror', 'Music', 'Musical', 'Mystery', 'News',
@@ -106,14 +133,13 @@ if __name__ == '__main__':
     with st.container():
      left_column, right_column = st.columns(2)
      with left_column:
-         st.write("")
-         st.title('MOVIE RECOMMENDER ENGINE') 
+            st.write("")
+            st.title('MOVIE RECOMMENDER ENGINE') 
      with right_column:
-         st_lottie(lottie_coding, height=300,width=400, key="coding")
+            st_lottie(lottie_coding, height=300,width=400, key="coding")
         
     
-    
-
+    #SELECTION BASIS OF RECOMMENDATION
     apps = ['*--Select--*', 'Movie based', 'Genres based']   
     app_options = st.selectbox('Method Of Recommendation:', apps)
     
