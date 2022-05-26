@@ -13,7 +13,7 @@ import streamlit.components.v1 as components
 
 #Setting the Page Configuration
 img = Image.open('./images/favicon.png')
-st.set_page_config(page_title='MovieRecommenderEngine' , page_icon=img , layout="centered",initial_sidebar_state="expanded")
+st.set_page_config(page_title='Movie Recommender Engine' , page_icon=img , layout="centered",initial_sidebar_state="expanded")
 
 #Designing the footer and MainMenu creating the skeleton of the website.
 hide_st_style = """
