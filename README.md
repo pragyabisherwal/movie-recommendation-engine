@@ -148,7 +148,7 @@ The KNN algorithm assumes that similar things exist in close proximity. In other
 Content-based filtering uses item features to recommend other items similar to what the user likes, based on their previous actions or explicit feedback.
 Content-based Filtering is a Machine Learning technique that uses similarities in features to make decisions. This technique is often used in recommender systems, which are algorithms designed to advertise or recommend things to users based on knowledge accumulated about the user.
 
-![Logo](https://editor.analyticsvidhya.com/uploads/62904R0.PNG)
+![4](https://user-images.githubusercontent.com/90054472/170394999-8bc9d111-3149-4f75-954f-467282ad8621.png)
 
 ## License
 
