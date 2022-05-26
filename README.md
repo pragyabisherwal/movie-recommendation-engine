@@ -5,6 +5,8 @@ Recommender System is a system that seeks to predict or filter preferences accor
 
 Movie recommendation systems usually predict what movies a user will like based on the attributes present in previously liked movies. Such recommendation systems are beneficial for organizations that collect data from large amounts of customers, and wish to effectively provide the best suggestions possible.
 
+![1](https://user-images.githubusercontent.com/90054472/170393752-365a2252-8230-44c6-946b-84767a1c4dd0.png)
+
 ## Acknowledgements
 
  - [Streamlit Documentation](https://docs.streamlit.io/)
@@ -14,6 +16,16 @@ Movie recommendation systems usually predict what movies a user will like based 
  - [KNN Algorithm ](https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761)
 
 - [Awesome README](https://github.com/matiassingers/awesome-readme)
+
+## Deployment
+
+Check Out The Deployment Of this Project here : 
+
+`MovieRecommenderEngine`
+
+(https://share.streamlit.io/pragyabisherwal/movie-recommendation-engine/app.py)
+ 
+ 
 ## Video Demo And Working
 
 Insert gif or link to demo
@@ -45,14 +57,6 @@ Install my-project with npm
   cd my-project
 ```
     
-## Deployment
-
-To deploy this project run
-
-```bash
-  streamlit run app.py
-```
-
 
 ## Run Locally
 
@@ -99,13 +103,16 @@ https://www.kaggle.com/datasets/carolzhangdc/imdb-5000-movie-dataset
 
 
 
-
-![Logo](https://pianalytix.com/wp-content/uploads/2020/10/Content-based-Recommender-System.jpg)
-
-
 ## Screenshots
 
-![1](https://user-images.githubusercontent.com/90054472/170393752-365a2252-8230-44c6-946b-84767a1c4dd0.png)
+``` bash
+     GLIMPSE OF THE WEBSITE
+```
+
+![2](https://user-images.githubusercontent.com/90054472/170393901-e6981c7b-096e-441b-9f4f-273b23b267be.png)
+
+
+![3](https://user-images.githubusercontent.com/90054472/170393908-2755d376-069c-4de5-bbe2-ebf0925acb8f.png)
 
 
 
