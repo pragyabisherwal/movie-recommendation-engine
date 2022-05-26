@@ -87,10 +87,19 @@ with st.sidebar:
             st.markdown(link, unsafe_allow_html=True)
             
     if selected == "Github-Repo":  
-        st_lottie(lottie_github,height=220,width=300,key="coding5")
-        if st.button("     MOVIE RECOMMENDATION ENGINE   "):
-         link = '[     PRAGYA BISHERWAL     ](https://github.com/pragyabisherwal/movie-recommendation-engine)'
-         st.markdown(link, unsafe_allow_html=True)
+        st_lottie(lottie_github,height=150,width=270,key="coding5")
+        st.write("Check Out The Github Repository For Movie Recommender Engine")
+        st.markdown(
+            """
+            <div style='background-color:#a873b0; cursor:pointer; height:2.5rem;font-size:25px;font-weight:bolder;text-align:center;border-radius:8px;font-family:Arial, Helvetica, sans-serif;'>
+                    <a  href="https://github.com/pragyabisherwal/movie-recommendation-engine" 
+                    style='display: block; text-align: center; color: black; text-decoration:none;'>
+                    GITHUB
+                    </a>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
 
 # Loading data and movies list from corresponding JSON files
@@ -245,4 +254,7 @@ with st.container():
         
     with right_column:
         st_lottie(lottie_contact,height=300,width=400,key="coding2")
+
+
+
        
