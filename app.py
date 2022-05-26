@@ -22,11 +22,10 @@ hide_st_style = """
             footer {visibility: visible;}
             footer:after{
                 background-color:#a873b0;
-                font-size:25px;
-                font-weight:bolder;
+                font-size:15px;
                 text-align:center;
                 width: 100%;
-                height:65px;
+                height:40px;
                 margin:1rem;
                 padding:0.8rem;
                 content:'Copyright © 2022 : Pragya Bisherwal';
@@ -236,6 +235,7 @@ with st.container():
         <input type="email" name="email" style="height:50px; width:300px; font-size:14pt;margin:5px;padding:10px;border-radius:5px;" placeholder="Your email" required>
         <textarea name="message" style="height:150px; width:300px; font-size:14pt;margin:5px;padding:10px;border-radius:5px;" placeholder="Your message here" required></textarea>
         <button style=" height:50px; width:300px; font-size:14pt; margin:5px; padding:10px;border-radius:5px;background-color:#90EE90" type="submit">Send</button>
+        <input type="hidden" name="_next" value="https://pragyabisherwal.github.io/ThankYou-FormSubmit/">
     </form>
     """
     left_column, right_column = st.columns(2)
