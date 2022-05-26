@@ -23,6 +23,7 @@ hide_st_style = """
             footer:after{
                 background-color:#a873b0;
                 font-size:15px;
+                font-weight:bolder;
                 text-align:center;
                 width: 100%;
                 height:40px;
@@ -91,9 +92,9 @@ with st.sidebar:
         st.write("Check Out The Github Repository For Movie Recommender Engine")
         st.markdown(
             """
-            <div style='background-color:#a873b0; cursor:pointer; height:2.5rem;font-size:25px;font-weight:bolder;text-align:center;border-radius:8px;font-family:Arial, Helvetica, sans-serif;'>
+            <div style='background-color:#a873b0; cursor:pointer; height:2.5rem;font-size:25px;font-weight:bolder;border-radius:5px;font-family: Helvetica, sans-serif;box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);'>
                     <a  href="https://github.com/pragyabisherwal/movie-recommendation-engine" 
-                    style='display: block; text-align: center; color: black; text-decoration:none;'>
+                    style='display: block; text-align: center; color: black; text-decoration:none;text-align:center;'>
                     GITHUB
                     </a>
             </div>
