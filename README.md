@@ -105,7 +105,8 @@ https://www.kaggle.com/datasets/carolzhangdc/imdb-5000-movie-dataset
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![1](https://user-images.githubusercontent.com/90054472/170393752-365a2252-8230-44c6-946b-84767a1c4dd0.png)
+
 
 
 ## Lessons Learned
