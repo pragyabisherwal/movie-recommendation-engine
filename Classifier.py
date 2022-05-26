@@ -1,6 +1,7 @@
 import numpy as np
 from operator import itemgetter
 
+# Creating a module of K-Nearest neighbours by applying it onto the k given test points and the target basis it will return the result.
 class KNearestNeighbours:
 
     def __init__(self, data, target, test_point, k):

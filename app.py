@@ -4,12 +4,9 @@ from Classifier import KNearestNeighbours
 from operator import itemgetter
 
 from PIL import Image
-from annotated_text import annotated_text
 from streamlit_option_menu import option_menu
-
 import requests
 from streamlit_lottie import st_lottie
-
 import streamlit.components.v1 as components
 
 
@@ -18,7 +15,7 @@ import streamlit.components.v1 as components
 img = Image.open('./images/favicon.png')
 st.set_page_config(page_title='MovieRecommenderEngine' , page_icon=img , layout="centered",initial_sidebar_state="expanded")
 
-
+#Designing the footer and MainMenu creating the skeleton of the website.
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
@@ -41,7 +38,7 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-
+#Loading the animation of the streamlit lottie
 def load_lottieurl(url):
     r = requests.get(url)
     if r.status_code != 200:
@@ -75,7 +72,8 @@ with st.sidebar:
                 "nav-link-selected": {"background-color": "#90EE90"},
                 }
                 )
-            
+
+#Adding Functionality to the sidebar on the basis of option being selected from the main menu.       
     if selected == "Home":
       st.empty()
     if selected == "Work":
@@ -96,12 +94,12 @@ with st.sidebar:
          st.markdown(link, unsafe_allow_html=True)
 
 
-
 # Loading data and movies list from corresponding JSON files
 with open(r'data.json', 'r+', encoding='utf-8') as f:
     data = json.load(f)
 with open(r'titles.json', 'r+', encoding='utf-8') as f:
     movie_titles = json.load(f)
+
 
 #Applying the KNN algorithms on to the point
 def knn(test_point, k):
@@ -122,14 +120,15 @@ def knn(test_point, k):
         table.append([movie_titles[i][0], movie_titles[i][2]])
     return table
 
-#All the genres
+#All the genres from which a user can select
 if __name__ == '__main__':
     genres = ['Action', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Family',
               'Fantasy', 'Film-Noir', 'Game-Show', 'History', 'Horror', 'Music', 'Musical', 'Mystery', 'News',
               'Reality-TV', 'Romance', 'Sci-Fi', 'Short', 'Sport', 'Thriller', 'War', 'Western']
     
     movies = [title[0] for title in movie_titles]
-
+    
+    #Designing of the header and main section of the application.
     with st.container():
      left_column, right_column = st.columns(2)
      with left_column:
@@ -139,11 +138,14 @@ if __name__ == '__main__':
             st_lottie(lottie_coding, height=300,width=400, key="coding")
         
     
-    #SELECTION BASIS OF RECOMMENDATION
+    #Selection basis of recommendation.
+
     apps = ['*--Select--*', 'Movie based', 'Genres based']   
     app_options = st.selectbox('Method Of Recommendation:', apps)
+
+
     
-    
+    #If Movie Based Recommendation is being selected this condtion will get executed.
     if app_options == 'Movie based':
         movie_select = st.selectbox('Select a movie:', ['--Select--'] + movies)
         if movie_select == '--Select--':
@@ -163,6 +165,8 @@ if __name__ == '__main__':
                 st.warning(movie)
                 st.markdown(f"📌 IMDB LINK --- [{movie}]({link})")
 
+        
+    #If Genre Based Recommendation is being selected this condtion will get executed.
     elif app_options == apps[2]:
         options = st.multiselect('Select genres:', genres)
         if options:
@@ -190,7 +194,7 @@ if __name__ == '__main__':
     else:
         st.write('Select option')
 
-
+# The video section of the website in which the demo of the application is being embedded.
 st.write("---")
 st. markdown("<h2 style='text-align:center; color:#A0CFD3;font-size:60px;font-family:monospace;'> HOW IT WORKS 😲</h2>", unsafe_allow_html=True)
 st.write("##")
@@ -206,6 +210,8 @@ with st.container():
 
 
 
+# The documentation section of the website in which the substaining crux of the development of the application 
+# is being added and embedded on to the application.
 
 st.write("---")
 st. markdown("<h1 style='text-align:center; color:#A0CFD3;font-size:55px;font-family:monospace;'>   EXPLORE THE CONTENT 😏</h1>", unsafe_allow_html=True)
@@ -215,12 +221,8 @@ components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vTdOckh6g-mN8
 
 
 
-
-
-
-
-
-
+#The contact me section of the website.Creation of an active form which directly notifies with
+# all the details of the sender along with the message om to the mail box
 
 st_lottie(lottie_loadLine,height=300,width=700,key="coding3")
 st. markdown("<h1 style='text-align:center; color:#A0CFD3;font-size:60px;font-family:monospace;'> WANT TO CONNECT 👨‍⚖️</h1>", unsafe_allow_html=True)
