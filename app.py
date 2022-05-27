@@ -24,15 +24,15 @@ hide_st_style = """
             footer {visibility: visible;}
             footer:after{
                 background-color:#a873b0;
-                font-size:15px;
-                font-weight:bolder;
-                text-align:center;
-                width: 100%;
+                font-size:18px;
+                font-weight:5px;
                 height:40px;
                 margin:1rem;
                 padding:0.8rem;
                 content:'Copyright © 2022 : Pragya Bisherwal';
-                display:block;
+                display: flex;
+                align-items:center;
+                justify-content:center;
                 color:white;
             }
             header {visibility: hidden;}
@@ -106,7 +106,7 @@ with st.sidebar:
         st.markdown(
             """
             <div style='
-            background-color:#6495ED; 
+            background-color:#A0CFD3; 
             font-weight:bold;
             cursor:pointer; 
             height:2.8rem;
