@@ -273,10 +273,6 @@ st.markdown("""<div>
     <br>""" , unsafe_allow_html=True)
 
         
-   
-
-
-
 # The documentation section of the website in which the substaining crux of the development of the application 
 # is being added and embedded on to the application.
 
