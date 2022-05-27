@@ -1,4 +1,4 @@
-from isort import file
+
 import streamlit as st
 import json
 from Classifier import KNearestNeighbours
