@@ -107,19 +107,20 @@ with st.sidebar:
             """
             <div style='
             background-color:#6495ED; 
+            font-weight:bold;
             cursor:pointer; 
             height:2.8rem;
             font-size:20px;
             border-radius:10px;
-            font-family: Helvetica, sans-serif;
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
             display: flex;
             align-items:center;
             justify-content:center;'>
-                    <a  href="https://github.com/pragyabisherwal/movie-recommendation-engine" 
+                    <a  href="https://pragyabisherwal.netlify.app/" 
                     style='color: white; 
                            text-decoration:none;
                            padding-top:6px;
+                           color: black; 
                            padding-bottom:5px;
                            text-align:center;'>
                            Pragya Bisherwal 👩‍💻
