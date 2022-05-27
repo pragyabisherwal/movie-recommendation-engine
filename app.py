@@ -52,8 +52,6 @@ def load_lottieurl(url):
 lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/private_files/lf30_bb9bkg1h.json")
 lottie_contact =load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_dhcsd5b5.json")
 lottie_loadLine =load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_yyjaansa.json")
-lottie_video =load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_1cmhfk0l.json")
-lottie_videoLine =load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_9B6yb3.json")
 lottie_github =load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_S6vWEd.json")
 
 
@@ -264,17 +262,18 @@ if __name__ == '__main__':
 
 # The video section of the website in which the demo of the application is being embedded.
 st.write("---")
-st. markdown("<h2 style='text-align:center; color:#A0CFD3;font-size:60px;font-family:monospace;'> HOW IT WORKS 😲</h2>", unsafe_allow_html=True)
-st.write("##")
-with st.container():
-    left_column, right_column = st.columns(2)
-    with left_column:
-        st.empty()
+st. markdown("<h2 style='text-align:center; color:#A0CFD3;font-size:60px;font-family:monospace;float:right;'> HOW IT WORKS 😲</h2>", unsafe_allow_html=True)
+st.markdown("""<div>
+         <br>
+        <section style='float:right;'>
+            <iframe 
+            width="650" height="400" src="https://www.youtube.com/embed/znVFP6fu0Qs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section> 
+    </div>
+    <br>""" , unsafe_allow_html=True)
 
         
-    with right_column:
-        st_lottie(lottie_video,height=400,width=400,key="coding4")
-
+   
 
 
 
@@ -282,7 +281,7 @@ with st.container():
 # is being added and embedded on to the application.
 
 st.write("---")
-st. markdown("<h1 style='text-align:center; color:#A0CFD3;font-size:55px;font-family:monospace;'>   EXPLORE THE CONTENT 😏</h1>", unsafe_allow_html=True)
+st. markdown("<h1 style='text-align:center; color:#A0CFD3;font-size:55px;font-family:monospace;float:right;'>EXPLORE THE CONTENT😏</h1>", unsafe_allow_html=True)
 st.write("")
 st.write("")
 components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vTdOckh6g-mN8BHmdqjCXwuhcFyG9voMhbcmsuQkVNaXHuBJWnXCIphIJywZKHfN2El5Hn455H_L_YF/embed?start=true&loop=true&delayms=3000",width=670, height=400, scrolling=True)
