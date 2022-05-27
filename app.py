@@ -24,9 +24,9 @@ hide_st_style = """
             footer {visibility: visible;}
             footer:after{
                 background-color:#a873b0;
-                font-size:18px;
+                font-size:12px;
                 font-weight:5px;
-                height:40px;
+                height:30px;
                 margin:1rem;
                 padding:0.8rem;
                 content:'Copyright © 2022 : Pragya Bisherwal';
