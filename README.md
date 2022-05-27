@@ -5,7 +5,7 @@ Recommender System is a system that seeks to predict or filter preferences accor
 
 Movie recommendation systems usually predict what movies a user will like based on the attributes present in previously liked movies. Such recommendation systems are beneficial for organizations that collect data from large amounts of customers, and wish to effectively provide the best suggestions possible.
 
-![1](https://user-images.githubusercontent.com/90054472/170393752-365a2252-8230-44c6-946b-84767a1c4dd0.png)
+![A](https://user-images.githubusercontent.com/90054472/170639993-f4e8bdee-c744-41f2-8464-936dafc89374.png)
 
 ## Acknowledgements
 
@@ -109,10 +109,10 @@ https://www.kaggle.com/datasets/carolzhangdc/imdb-5000-movie-dataset
      GLIMPSE OF THE WEBSITE
 ```
 
-![2](https://user-images.githubusercontent.com/90054472/170393901-e6981c7b-096e-441b-9f4f-273b23b267be.png)
+![B](https://user-images.githubusercontent.com/90054472/170640180-e84fa26f-395a-46d2-950f-c755c9f1f8d8.png)
 
 
-![3](https://user-images.githubusercontent.com/90054472/170393908-2755d376-069c-4de5-bbe2-ebf0925acb8f.png)
+![C](https://user-images.githubusercontent.com/90054472/170640183-15469c1c-0237-4082-a091-69fbbac5855b.png)
 
 
 
