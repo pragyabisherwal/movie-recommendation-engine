@@ -1,3 +1,4 @@
+from isort import file
 import streamlit as st
 import json
 from Classifier import KNearestNeighbours
@@ -15,6 +16,7 @@ import streamlit.components.v1 as components
 img = Image.open('./images/favicon.png')
 st.set_page_config(page_title='Movie Recommender Engine' , page_icon=img , layout="centered",initial_sidebar_state="expanded")
 
+    
 #Designing the footer and MainMenu creating the skeleton of the website.
 hide_st_style = """
             <style>
@@ -53,16 +55,15 @@ lottie_loadLine =load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_y
 lottie_video =load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_1cmhfk0l.json")
 lottie_videoLine =load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_9B6yb3.json")
 lottie_github =load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_S6vWEd.json")
-lottie_resume=load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_lrw0segg.json")
-lottie_portfolio=load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_dkuwscrg.json")
+
 
 
 #Sidebar Designing And Functioning
 with st.sidebar:
     selected = option_menu(
                 menu_title="MOVIES MANIA",  # required
-                options=["Home", "Work", "Github-Repo"],  # required
-                icons=["house", "book", "github"],  # optional
+                options=["Home", "About", "Github-Repo"],  # required
+                icons=["house", "person-square", "github"],  # optional
                 menu_icon="cast",  # optional
                 default_index=0,  # optional
                  styles={
@@ -76,25 +77,82 @@ with st.sidebar:
 #Adding Functionality to the sidebar on the basis of option being selected from the main menu.       
     if selected == "Home":
       st.empty()
-    if selected == "Work":
-        if st.error("**PORTFOLIO**"):
-            st_lottie(lottie_resume,key="coding6")
-            link = '[**🎲  Visit My Portfolio >>** ](http://lnkiy.in/Pragya_Portfolio)'
-            st.markdown(link, unsafe_allow_html=True)
+    
+    #The About And Portfolio Section.
+    if selected == "About":
+        st.markdown("""
+        <div style='
+            background-color:#a873b0; 
+            padding:1rem;
+            font-size:17px;
+            border-radius:8px;
+            text-align: justify;
+           '>
+            I am a fresher currently pursuing my B.TECH in Computer Science.I have keen interest in website designing and developing.I am from from Delhi, India.In addition, I am capable of managing and performing well under pressure.
+        </div>
+        <br>
+       """
+        ,unsafe_allow_html=True,)
 
-        if st.error("**RESUME**"):
-            st_lottie(lottie_portfolio,key="coding7")
-            link = '[**🎲 Have A Look On my Resume >>** ](http://lnkiy.in/Pragya_Resume )'
-            st.markdown(link, unsafe_allow_html=True)
+#For directly downloading the resume on to local.
+        with open("./images/PRAGYABISHERWAL_RESUME..pdf", "rb") as file: 
+            st.download_button(
+            label="Download Resume",
+            data=file,
+            file_name='PragyaBisherwal_RESUME.pdf',
+            mime='text/pdf',
+            )
+        st.subheader("Visit My Portfolio Website 💻")
+        st.markdown(
+            """
+            <div style='
+            background-color:#6495ED; 
+            cursor:pointer; 
+            height:2.8rem;
+            font-size:20px;
+            border-radius:10px;
+            font-family: Helvetica, sans-serif;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            display: flex;
+            align-items:center;
+            justify-content:center;'>
+                    <a  href="https://github.com/pragyabisherwal/movie-recommendation-engine" 
+                    style='color: white; 
+                           text-decoration:none;
+                           padding-top:6px;
+                           padding-bottom:5px;
+                           text-align:center;'>
+                           Pragya Bisherwal 👩‍💻
+                    </a>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+# The github repo code.
             
     if selected == "Github-Repo":  
         st_lottie(lottie_github,height=150,width=270,key="coding5")
-        st.write("Check Out The Github Repository For Movie Recommender Engine")
+        st.subheader("Check Out The Github Repository For Movie Recommender Engine")
         st.markdown(
             """
-            <div style='background-color:#a873b0; cursor:pointer; height:2.5rem;font-size:25px;font-weight:bolder;border-radius:5px;font-family: Helvetica, sans-serif;box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);'>
+            <div style='
+            background-color:#a873b0; 
+            cursor:pointer; 
+            height:2.8rem;
+            font-size:25px;
+            font-weight:bolder;
+            border-radius:5px;
+            font-family: Helvetica, sans-serif;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            display: flex;
+            align-items:center;
+            justify-content:center;'>
                     <a  href="https://github.com/pragyabisherwal/movie-recommendation-engine" 
-                    style='display: block; text-align: center; color: black; text-decoration:none;text-align:center;'>
+                    style='color: black; 
+                           text-decoration:none;
+                           padding-top:6px;
+                           padding-bottom:5px;
+                           text-align:center;'>
                     GITHUB
                     </a>
             </div>
@@ -235,7 +293,9 @@ components.iframe("https://docs.google.com/presentation/d/e/2PACX-1vTdOckh6g-mN8
 
 st_lottie(lottie_loadLine,height=300,width=700,key="coding3")
 st. markdown("<h1 style='text-align:center; color:#A0CFD3;font-size:60px;font-family:monospace;'> WANT TO CONNECT 👨‍⚖️</h1>", unsafe_allow_html=True)
-# ---- CONTACT ----
+
+
+# Designing of contact form 
 st.write("")
 with st.container():
     contact_form = """
