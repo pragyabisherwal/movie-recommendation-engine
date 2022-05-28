@@ -266,8 +266,7 @@ st. markdown("<h2 style='text-align:center; color:#A0CFD3;font-size:60px;font-fa
 st.markdown("""<div>
          <br>
         <section style='float:right;'>
-            <iframe 
-            width="650" height="400" src="https://www.youtube.com/embed/znVFP6fu0Qs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="650" height="400" src="https://www.youtube.com/embed/DiNjSPCjkMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section> 
     </div>
     <br>""" , unsafe_allow_html=True)
