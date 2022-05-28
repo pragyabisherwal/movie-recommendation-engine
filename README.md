@@ -28,7 +28,7 @@ Check Out The Deployment Of this Project here :
  
 ## Video Demo And Working
 
-Insert gif or link to demo
+https://youtu.be/DiNjSPCjkMU
 
 
 ## Presentation
